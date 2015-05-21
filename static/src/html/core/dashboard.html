@@ -1,0 +1,38 @@
+<div id="wrapper" ng-show="true" class="">
+   <nav class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse">
+         <ul class="nav" id="side-menu">
+            <li class="nav-header">
+               <h1 ><a ui-sref="dashboard"><small>Platform</small></a></h1>
+            </li>
+            <li>
+               <a ui-sref="home">
+                  <span class="fa fa-home"></span>     
+                  Home
+               </a>
+            </li>
+            <li>
+               <a href="">
+                  <span class="fa fa-cogs"></span>     
+                  <span class="nav-label">Tools</span>
+                  <span class="fa arrow"></span>
+               </a>
+               <ul class="nav nav-second-level" id="">
+               </ul>
+            </li>
+            <div ui-view="app-nav" class="nav animated fadeInDown" id="app-menu"></div>
+         </ul>
+      </div>
+   </nav>
+   <script>
+   $('#side-menu').metisMenu({
+      toggle: false
+   });
+   </script>
+
+   <div id="page-wrapper" class="gray-bg dashbard-1">
+      <div ui-view="top-nav"></div>
+      <div ui-view="content"></div>
+   </div>
+</div>
+
